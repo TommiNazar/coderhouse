@@ -1,9 +1,16 @@
+const fs = require('fs');
+
+
+
+
 class ProductManager {
 
         #id = 0
 
         constructor() {
             this.products = [];
+            
+
         }
         
         getProducts() {
@@ -47,3 +54,8 @@ class ProductManager {
     productManager.addProduct('Producto de prueba', 'Este es un producto de prueba', 200, 'Sin imagen', 'abc123', 25);
 
     console.log(productManager.getProducts())
+
+
+    let sabores = ["cafe con leche","cortado", 'lungo', 'expreso', 'capuchino'];
+
+    
