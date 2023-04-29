@@ -26,10 +26,15 @@ class ProductManager {
 			// Agrego el nuevo usuario
 			actualProduct.push(product);
 
+            product.id = this.#getID();
+
 			// Escribo nuevamente le archivo ./users.json
 			await fs.promises.writeFile(
 				'./product.json',
 				JSON.stringify(actualProduct) // Transformo el array en string
+                
+
+                
 			);
 		} catch (err) {
 			// Si hay error imprimo el error en consola
@@ -59,8 +64,11 @@ class ProductManager {
 
     #getID() {
         this.#id++
+        const productsid = this.#id
         return this.#id
-    }
+        }
+
+    
 
 }
 
@@ -71,19 +79,21 @@ const test = async () => {
 	// intento
 	try {
 		// Agregar usuario
+
 		await products.addProduct({
-            id: this.id,
+            
 			nombre: 'capuchino',
 			descripcion: 'cafe',
 			precio: 1489,
 			stock: 43,
 		});
 		// Agregar usuario
+
 		await products.addProduct({
-            id: this.id,
 			nombre: 'cortado',
 			descripcion: 'cafe',
 			precio:32,
+            stock: 24,
 		});
 
 		// Imprimo los usuarios que administra
@@ -94,5 +104,8 @@ const test = async () => {
 	}
 };
 
+
+
 // Ejecuto el test
 test();
+

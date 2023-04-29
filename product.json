@@ -1,1 +1,1 @@
-[{"nombre":"capuchino","descripcion":"cafe","precio":1489,"stock":43},{"nombre":"cortado","descripcion":"cafe","precio":32}]
+[{"nombre":"capuchino","descripcion":"cafe","precio":1489,"stock":43,"id":1},{"nombre":"cortado","descripcion":"cafe","precio":32,"stock":24,"id":2}]
