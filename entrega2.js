@@ -1,4 +1,3 @@
-const { log } = require('console');
 const fs = require('fs');
 
 
@@ -6,14 +5,16 @@ const fs = require('fs');
 class ProductManager {
 
     #id = 0
+    path = './product.json';
+    products=[]
 
     constructor() {
         
-
+        
 		// Si no existe ruta
-		if (!fs.existsSync('./product.json')) {
+		if (!fs.existsSync(this.path)) {
 			// escribo el archivo de forma sincronica con un array vacio
-			fs.writeFileSync('./product.json', JSON.stringify([]));
+			fs.writeFileSync(this.path, JSON.stringify(this.products));
 		}
 
 
@@ -21,21 +22,19 @@ class ProductManager {
 
     async addProduct(product){
         try {
-			// Obtengo los usuarios actuales
+			// Obtengo los productos actuales
 			const actualProduct = await this.getProduct();
-			// Agrego el nuevo usuario
+			// Agrego el nuevo producto
 			actualProduct.push(product);
 
             product.id = this.#getID();
 
-			// Escribo nuevamente le archivo ./users.json
+			// Escribo nuevamente le archivo './product.json'
 			await fs.promises.writeFile(
 				'./product.json',
-				JSON.stringify(actualProduct) // Transformo el array en string
-                
-
-                
+				JSON.stringify(actualProduct)// Transformo el array en string                
 			);
+            return product
 		} catch (err) {
 			// Si hay error imprimo el error en consola
 			console.log('No puedo agregar producto');
@@ -64,19 +63,40 @@ class ProductManager {
 
     #getID() {
         this.#id++
-        const productsid = this.#id
         return this.#id
         }
+
+        getProductById (idProducto){
+
+        
+            const productsIndex = this.products.findIndex(
+                (product) => product === idProducto
+            );
+            
+    
+            if (productsIndex  === -1) {
+                console.log('No existe el producto');
+        }
+        else{
+            console.log('el producto q esta buscando por id es:')
+           
+           console.log(productsIndex);
+        }
+        
+        }
+        
 
     
 
 }
 
+
+
 const products = new ProductManager();
 
 // Creo una funcion asincronica
 const test = async () => {
-	// intento
+	
 	try {
 		// Agregar usuario
 
@@ -109,3 +129,4 @@ const test = async () => {
 // Ejecuto el test
 test();
 
+products.getProductById(2)

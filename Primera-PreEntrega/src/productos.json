@@ -1,0 +1,102 @@
+[
+    {
+        "title": "Yerba Mate",
+        "description": "Producto prueba",
+        "price": 1000,
+        "thumbnail": "Sin imagen",
+        "code": "abc123",
+        "stock": 25,
+        "id": 1
+    },
+    {
+        "title": "Coca Cola",
+        "description": "Producto prueba",
+        "price": 800,
+        "thumbnail": "Sin imagen",
+        "code": "cc111",
+        "stock": 50,
+        "id": 2
+    },
+    {
+        "title": "Arroz primavera",
+        "description": "Producto prueba",
+        "price": 350,
+        "thumbnail": "Sin imagen",
+        "code": "ddd22",
+        "stock": 40,
+        "id": 3
+    },
+    {
+        "title": "Puré instantáneo",
+        "description": "Producto prueba",
+        "price": 200,
+        "thumbnail": "Sin imagen",
+        "code": "ee777",
+        "stock": 50,
+        "id": 4
+    },
+    {
+        "title": "Atún",
+        "description": "Producto prueba",
+        "price": 500,
+        "thumbnail": "Sin imagen",
+        "code": "qq99",
+        "stock": 60,
+        "id": 5
+    },
+    {
+        "title": "Dulce de Leche",
+        "description": "Producto prueba",
+        "price": 250,
+        "thumbnail": "Sin imagen",
+        "code": "aa20",
+        "stock": 35,
+        "id": 6
+    },
+    {
+        "title": "Café Instantáneo",
+        "description": "Producto prueba",
+        "price": 600,
+        "thumbnail": "Sin imagen",
+        "code": "cx99",
+        "stock": 50,
+        "id": 7
+    },
+    {
+        "title": "Queso Untable",
+        "description": "Producto prueba",
+        "price": 350,
+        "thumbnail": "Sin imagen",
+        "code": "pq12",
+        "stock": 40,
+        "id": 8
+    },
+    {
+        "title": "Leche en Polvo",
+        "description": "Producto prueba",
+        "price": 900,
+        "thumbnail": "Sin imagen",
+        "code": "ty10",
+        "stock": 60,
+        "id": 10
+    },
+    {
+        "title": "Café Tostado",
+        "description": "Producto prueba",
+        "code": "vv123",
+        "price": 1500,
+        "status": "True",
+        "stock": 10,
+        "category": "Bebibles",
+        "thumbnails": "sin imagen"
+    },
+    {
+        "title": "Semillas Pipa",
+        "description": "Producto prueba",
+        "price": 200,
+        "thumbnail": "Sin imagen",
+        "code": "xv74",
+        "stock": 50,
+        "id": 9
+    }
+]
